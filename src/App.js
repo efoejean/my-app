@@ -1,21 +1,16 @@
 import React from "react";
-import { Container, Grow, Grid } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter, Swich, Route } from "react-router-dom";
+
 
 const App = () => {
   return (
   <Container maxWidth="lg">
     <Navbar/>
+    <Home/>
 
-    <Grow in>
-        <Container maxWidth="lg">
-        <Grid container spacing={3}>
-            
-        </Grid>
-        </Container>
-        </Grow>
-
-    </Container>
+  </Container>
 
 
 
