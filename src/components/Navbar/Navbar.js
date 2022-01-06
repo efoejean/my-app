@@ -16,7 +16,7 @@ const classes = useStyles();
         // using material-ui to styles the AppBar, import it from styles.js
         <AppBar className={classes.appbar} position="static" color="inherit"> 
         <div className={classes.brandContainer}>
-        <Typography  className={classes.heading} variant="h2" align="center">
+        <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">
           Welcome to React 
         </Typography>
         </div>
