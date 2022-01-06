@@ -7,16 +7,17 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Auth from "./components/Auth/Auth";
 
-
+// usinng components files in the app.js file
+// Routes is a component that takes in a list of routes.
 const App = () => 
    (
 
-    <BrowserRouter>
+    <BrowserRouter> 
   <Container maxWidth="lg">
     
     <Navbar/>
-    <Routes>
-      <Route exact path="/" exact component={Home} />
+    <Routes> 
+      <Route path="/" exact component={Home} />
       <Route path="/auth" exact component={Auth} />
     </Routes>
 
