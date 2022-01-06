@@ -1,9 +1,12 @@
 import React from "react";
-import { AppBar, Typography } from "@material-ui/core"; 
-import { Link } from "react-router-dom"; // 
+import { AppBar, Avatar, Typography, Toolbar, Button } from "@material-ui/core"; 
+import { Link } from "react-router-dom";
+
 
 
 import useStyles from "./styles";
+
+const user = null;
 
  const Navbar = () => {
 
@@ -17,9 +20,16 @@ const classes = useStyles();
           Welcome to React 
         </Typography>
         </div>
-        <toolbar className={classes.toolbar}>
+        
+        <Toolbar className={classes.toolbar}> 
+        {user? (<div className={classes.profile}>
+            <Avatar className={classes.purple}  alt={user.result.name} src={user.result.imageUrl}>{user.result.name.charAt(0)}</Avatar>
+            <Typography className={classes.userName} variant="h6" align="center">{user.result.name}</Typography>
+            <Button className={classes.logout} color="Secondary">Logout</Button>
+        </div>
+        ):(<Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>)}
 
-        </toolbar>
+        </Toolbar> 
     </AppBar>
     );
   
