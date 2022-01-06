@@ -1,14 +1,11 @@
 import React from "react";
-import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
+import { Container, Grow, Grid } from "@material-ui/core";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
   <Container maxWidth="lg">
-    <AppBar position="static" color="inherit">
-        <Typography variant="h2" align="center">
-          Welcome to React 
-        </Typography>
-    </AppBar>
+    <Navbar/>
 
     <Grow in>
         <Container maxWidth="lg">
