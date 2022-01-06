@@ -7,11 +7,15 @@ import useStyles from './styles';
 import Input from './Input';
 
  const Auth = () => {
-    
 
     const classes = useStyles();
 
+    const [showPassword, setShowPassword] = useState(false);
+
      const isSignup = false;
+
+     // to toggle the password show/hide
+     const handleShowPassword = () => setShowPassword((prev) => !prev);
 
      const handleSubmit = (e) => {
 
@@ -20,6 +24,8 @@ import Input from './Input';
      const handleChange = (e) => {
 
      };
+
+     
     return (
         <Container component="main" maxWidth="xg">
         <Paper className={classes.paper} elevation={3}>
@@ -38,7 +44,8 @@ import Input from './Input';
                 </>
             )}
             <Input name="email" label="Email" autoFocus={true} type="email" handleChange={handleChange}/>
-            <Input password="password" label="password" handleChange={handleChange} type="password" autoFocus xs={12} />
+            <Input password="password" label="password" handleChange={handleChange} type={showPassword ? "text" : "password"} handleShowPassword={handleShowPassword}  />
+            {isSignup &&  <Input name="confirmPassword" label="Repeat Password" handleChange={handleChange} type="password" />}
             </Grid>
         </form>
         </Paper>
