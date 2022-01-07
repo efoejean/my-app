@@ -12,7 +12,7 @@ import Input from './Input';
 
     const [showPassword, setShowPassword] = useState(false);
 
-     const isSignup = false;
+     const isSignup = true;
 
      // to toggle the password show/hide
      const handleShowPassword = () => setShowPassword((prev) => !prev);
@@ -24,10 +24,8 @@ import Input from './Input';
      const handleChange = (e) => {
 
      };
-
-     
     return (
-        <Container component="main" maxWidth="xg">
+        <Container component="main" maxWidth="xs">
         <Paper className={classes.paper} elevation={3}>
         <Avatar className={classes.avatar}>
             <LockOutlinedIcon />

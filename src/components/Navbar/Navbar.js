@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 import useStyles from "./styles";
 
+
 const user = null;
 
  const Navbar = () => {
